@@ -17,59 +17,94 @@ let multiply = document.getElementById("multiply");
 let division = document.getElementById("division");
 let equal = document.getElementById("equal");
 
+let plusAvaible = true;
+let minusAvaible = true;
 let firstAdder = 0;
 let secondAdder = 0;
 
+multiply.style.color = "red";
+division.style.color = "red";
+
 one.addEventListener("click", () => {
     screen.textContent += 1;
+    let plusAvaible = true;
+    let minusAvaible = true;
 });
 
 two.addEventListener("click", () => {
     screen.textContent += 2;
+    let plusAvaible = true;
+    let minusAvaible = true;
 });
 
 three.addEventListener("click", () => {
     screen.textContent += 3;
+    let plusAvaible = true;
+    let minusAvaible = true;
 });
 
 four.addEventListener("click", () => {
     screen.textContent += 4;
+    let plusAvaible = true;
+    let minusAvaible = true;
 });
 
 five.addEventListener("click", () => {
     screen.textContent += 5;
+    let plusAvaible = true;
+    let minusAvaible = true;
 });
 
 six.addEventListener("click", () => {
     screen.textContent += 6;
+    let plusAvaible = true;
+    let minusAvaible = true;
 });
 
 seven.addEventListener("click", () => {
     screen.textContent += 7;
+    let plusAvaible = true;
+    let minusAvaible = true;
 });
 
 eight.addEventListener("click", () => {
     screen.textContent += 8;
+    let plusAvaible = true;
+    let minusAvaible = true;
 });
 
 nine.addEventListener("click", () => {
     screen.textContent += 9;
+    let plusAvaible = true;
+    let minusAvaible = true;
 });
 
 zero.addEventListener("click", () => {
     screen.textContent += 0;
+    let plusAvaible = true;
+    let minusAvaible = true;
 });
 
-let plusAvaible = true;
+
 plus.addEventListener("click", () => {
-    if (plusAvaible == true) {
+    if (plusAvaible == true && minusAvaible == true) {
         firstAdder = screen.textContent;
         screen.textContent += "+";
         plusAvaible = false;
+        minusAvaible = false;
+    }
+});
+
+minus.addEventListener("click", () => {
+    if (plusAvaible == true && minusAvaible == true) {
+        firstAdder = screen.textContent;
+        screen.textContent += "-";
+        plusAvaible = false;
+        minusAvaible = false;
     }
 });
 
 equal.addEventListener("click", () => {
     secondAdder = screen.textContent.replace("+", "").replace(firstAdder, "");
-    screen.textContent = Number(firstAdder) + Number(secondAdder);
+    screen.textContent = Number(firstAdder) + Number(secondAdder); 
 });
